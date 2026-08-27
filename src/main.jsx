@@ -30,8 +30,12 @@ function ProjectCard({ project, onOpen }) {
   return <article className={`project-card project-${project.visual} reveal is-visible`}><button className="project-visual" type="button" onClick={() => onOpen(project)} aria-label={`Lihat detail ${project.title}`}><span className="visual-number">{project.number}</span>{visuals[project.visual]}<strong>{project.visualLabel}<br />{project.visualLabelTwo}</strong><ArrowUpRight className="card-arrow" /></button><div className="project-meta"><div><p className="project-tag">{project.tag}</p><h3>{project.title}</h3><p className="project-description">{project.description}</p><div className="project-links"><a className="project-link" href={project.repo} target="_blank" rel="noreferrer">GitHub repository <GitBranch /></a></div></div><button className="small-link" type="button" onClick={() => onOpen(project)} aria-label={`Lihat detail ${project.title}`}><ArrowUpRight /></button></div></article>;
 }
 
+function NetworkCat({ ghost }) {
+  return <div className={`network-cat-track${ghost ? ` network-cat-track-${ghost}` : ''}`}><span className={`network-cat${ghost ? ` network-cat-ghost-${ghost}` : ''}`}><i className="network-cat-head"><b className="network-cat-eye" /></i><i className="network-cat-body" /><i className="network-cat-tail" /><i className="network-cat-leg network-cat-leg-one" /><i className="network-cat-leg network-cat-leg-two" /><i className="network-cat-leg network-cat-leg-three" /><i className="network-cat-leg network-cat-leg-four" /></span></div>;
+}
+
 function NetworkArt() {
-  return <div className="geometric-network" aria-hidden="true"><span className="network-haze" /><div className="network-core"><span className="network-orbit" /><div className="network-shell"><span className="network-crystal" />{[1, 2, 3, 4].map(number => <i key={number} className={`network-line network-line-${['one', 'two', 'three', 'four'][number - 1]}`} />)}{[1, 2, 3, 4, 5, 6].map(number => <b key={number} className={`network-node network-node-${['one', 'two', 'three', 'four', 'five', 'six'][number - 1]}`} />)}</div></div></div>;
+  return <div className="geometric-network" aria-hidden="true"><span className="network-haze" /><div className="network-core"><span className="network-orbit" /><div className="network-shell"><span className="network-crystal" />{[1, 2, 3, 4].map(number => <i key={number} className={`network-line network-line-${['one', 'two', 'three', 'four'][number - 1]}`} />)}{[1, 2, 3, 4, 5, 6].map(number => <b key={number} className={`network-node network-node-${['one', 'two', 'three', 'four', 'five', 'six'][number - 1]}`} />)}</div><NetworkCat ghost="ghost-two" /><NetworkCat ghost="ghost-one" /><NetworkCat /></div></div>;
 }
 
 function App() {
