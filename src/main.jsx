@@ -35,7 +35,7 @@ function NetworkCat({ ghost }) {
 }
 
 function NetworkArt() {
-  return <div className="geometric-network" aria-hidden="true"><span className="network-haze" /><div className="network-core"><span className="network-orbit" /><div className="network-shell"><span className="network-crystal" />{[1, 2, 3, 4].map(number => <i key={number} className={`network-line network-line-${['one', 'two', 'three', 'four'][number - 1]}`} />)}{[1, 2, 3, 4, 5, 6].map(number => <b key={number} className={`network-node network-node-${['one', 'two', 'three', 'four', 'five', 'six'][number - 1]}`} />)}</div><NetworkCat ghost="ghost-two" /><NetworkCat ghost="ghost-one" /><NetworkCat /></div></div>;
+  return <div className="geometric-network" aria-hidden="true"><span className="network-haze" /><div className="network-core"><span className="network-orbit" /><div className="network-shell"><span className="network-crystal" />{[1, 2, 3, 4].map(number => <i key={number} className={`network-line network-line-${['one', 'two', 'three', 'four'][number - 1]}`} />)}{[1, 2, 3, 4, 5, 6].map(number => <b key={number} className={`network-node network-node-${['one', 'two', 'three', 'four', 'five', 'six'][number - 1]}`} />)}</div><NetworkCat /></div></div>;
 }
 
 function App() {
