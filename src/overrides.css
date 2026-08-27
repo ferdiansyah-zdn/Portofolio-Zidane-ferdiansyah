@@ -1,0 +1,15 @@
+.project-visual {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  font: inherit;
+}
+
+.small-link {
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+}
